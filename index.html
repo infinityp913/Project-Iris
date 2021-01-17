@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Readable: Text to audio
+        </title>
+        <link href="main.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="Talkify-master/dist/talkify.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="header">
+            <img id="logo" alt="logo" src="Project Iris.png">
+        </div>
+        <div id="video-row">
+        <div id="video-wrapper">
+            <video alt="A live stream of your camera" id="livevid" muted autoplay></video>
+        </div>
+        </div>
+        <main role="main">
+        <div id="info">
+            <div id="button-wrapper">
+                <button id="button-card" type="button" class="btn btn-outline-light btn-lg" onclick="snapshot()">
+                    Translate
+                </button>
+                <div id="dropdown-card">
+                    Dropdown here
+                </div>
+            </div>
+            <div id="output-wrapper">
+                <div id="output-card">
+                    Your object is an: 
+                </div>
+            </div>
+        </div>
+        </main>  
+    </body>
+</html>

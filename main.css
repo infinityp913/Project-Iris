@@ -1,0 +1,124 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(85,44,198);
+    background: linear-gradient(35deg, rgba(85,44,198,1) 23%, rgba(0,163,200,1) 100%);
+}
+
+#header{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+}
+
+#logo{
+    width: 150px;
+}
+
+#video-wrapper {
+    width: 50vh;
+    height: 50vh;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5%;
+    box-shadow: 15px 20px  rgb(243, 243, 243);
+}
+
+#video-row{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+#video {
+    object-fit: cover;
+}
+
+#button-card {
+    width: 20vw;
+    height: 10vw;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 10%;
+    font-size: 2vh;
+}
+
+#dropdown-card {
+    width: 20vw;
+    height: 10vw;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 10%;
+    border-color: rgb(243, 243, 243);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(243, 243, 243);
+    background-color:  rgb(243, 243, 243, 0);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin-left: 4vh;
+    font-size: 2vh;
+}
+
+#output-card {
+    width: 20vw;
+    height: 10vw;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 10%;
+    border-color: rgb(243, 243, 243);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(243, 243, 243);
+    background-color:  rgb(243, 243, 243);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin-left: 4vh;
+    font-size: 2vh;
+    color: black;
+}
+
+#button-wrapper{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+}
+
+#output-wrapper{
+    display: flex;
+    width: 100%;
+    height: 30vh;
+}
+
+#info {
+    display: flex;
+    margin-top: 60vh;
+    width: 100%;
+    height: 30vh;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+}
+
+
