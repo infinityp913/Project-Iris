@@ -1,13 +1,14 @@
 html{
-    height: 100%;
+    height: auto;
+    min-height: 100%;
 }
 
 body{
+    background: rgb(85,44,198);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     height: 100%;
     margin: 0 auto;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: rgb(85,44,198);
     background: linear-gradient(35deg, rgba(85,44,198,1) 23%, rgba(0,163,200,1) 100%);
 }
 
@@ -29,11 +30,11 @@ body{
     min-width: 150px;
     min-height: 150px;
     overflow: hidden;
-    flex-direction: column;
     position: relative;
     margin: 0 auto;
     border-radius: 5%;
     box-shadow: 15px 20px  rgb(243, 243, 243);
+    align-content: center;
 }
 
 #video-row{
@@ -43,8 +44,12 @@ body{
     margin-bottom: 40px;
 }
 
-#video {
+video {
     object-fit: cover;
+    width: 60vw;
+    height: 60vw;
+    margin: 0 auto;
+    display: flex;
 }
 
 #info {
