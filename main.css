@@ -19,7 +19,7 @@ body{
 }
 
 #logo{
-    width: 150px;
+    height: 6vh;
 }
 
 #video-wrapper {
@@ -41,7 +41,6 @@ body{
     width: 100vw;
     position: relative;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 video {
@@ -53,9 +52,10 @@ video {
 }
 
 #info {
+    margin: 5vh 0 5vh 0;
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     position: relative;
     flex-direction: column;
     align-items: center;
@@ -74,8 +74,8 @@ video {
 }
 
 #button-card {
-    width: 20vw;
-    height: 10vw;
+    width: 20vh;
+    height: 10vh;
     max-width: 150px;
     max-height: 150px;
     min-width: 100px;
@@ -85,8 +85,8 @@ video {
 }
 
 #dropdown-card {
-    width: 20vw;
-    height: 10vw;
+    width: 20vh;
+    height: 10vh;
     max-width: 150px;
     max-height: 150px;
     min-width: 100px;
@@ -111,8 +111,7 @@ video {
 }
 
 #output-card {
-    width: 20vw;
-    height: 10vw;
+    height: 10vh;
     max-width: 150px;
     max-height: 150px;
     min-width: 100px;
