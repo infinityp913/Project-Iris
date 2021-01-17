@@ -95,6 +95,7 @@ body{
     margin-left: 4vh;
     font-size: 2vh;
     color: black;
+    margin: 0 auto;
 }
 
 #button-wrapper{
@@ -105,14 +106,14 @@ body{
 }
 
 #output-wrapper{
+    width: 100vw;
+    position: fixed;
     display: flex;
-    width: 100%;
-    height: 30vh;
 }
 
 #info {
     display: flex;
-    margin-top: 60vh;
+    margin-top: 55vh;
     width: 100%;
     height: 30vh;
     position: fixed;
