@@ -1,0 +1,26 @@
+{
+  "name": "project-iris",
+  "version": "1.0.0",
+  "description": "An application that translates objects you see into words in your language.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinityp913/Project-Iris.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infinityp913/Project-Iris/issues"
+  },
+  "homepage": "https://github.com/infinityp913/Project-Iris#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "google-translate-api": "^2.3.0",
+    "path": "^0.12.7",
+    "whatwg-url": "^8.4.0"
+  }
+}
