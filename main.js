@@ -5,15 +5,10 @@ window.onload = loaded;
 
 //function to call when the window has been loaded
 function loaded(){
-
-  // talkify config stuff
-//   talkify.config.remoteService.host = 'https://talkify.net';
-//   talkify.config.remoteService.apiKey = '558cecb3-7843-4ad6-b759-993123affadc';
-//   talkify.config.ui.audioControls.enabled = true;
-  //add an event listener 
   live();
+  // translate_req();
+  classify();
 }
-console.log('whatever');
 
 function live() {
   const video = document.getElementById('livevid');
@@ -57,32 +52,36 @@ const constraint =
         }
     }
 
-function startReading(){
-  //Get frame from camera feed
 
-  //Analyse frame using tesseract
-  // const config = {
-  //   lang: "eng",
-  //   oem: 1,
-  //   psm: 3,
-  // }
-  // let textData = ""
-  // tesseract.recognize("image.jfif", config)
-  //   .then(text => {
-  //     console.log("Result:", text)
-  //     textData = text
-  //   })
-  //   .catch(error => {
-  //     console.log(error.message)
-  //     textData = "Sorry I didn't catch that."
-  //   })
+async function classify(){
+  const img = document.getElementById('cat'); // THIS WON'T WORK SINCE THE HTML IS COMMENTED OUT
 
-  //Generate audio based on the text
-  const player = new talkify.TtsPlayer()
-  .forceVoice({name: "Zira"});
-  player.setRate(-1);
-  player.playText("Hello world");
-  const audio = document.getElementById("talkify-audio");
-  audio.classList.add("audio");
-  document.getElementById('audio-wrapper').appendChild(audio);
+  const model = await mobilenet.load();
+  const predictions = await model.classify(img);
+
+  const pred = predictions.reduce((acc, val) => {
+    acc = acc.probability > val.probability ? acc : val;
+    return acc;
+  }, {className: "", probability: -1});
+  console.log(`Prediction: ${pred.className}`);
+}
+
+async function translate_req(){
+  const response = await fetch('/translate', {
+      method: 'POST',
+          headers: {
+              'Content-Type': 'text/plain'
+          },
+          body: JSON.stringify({
+              text: 'I speak Dutch',
+              lang: 'nl'
+          })
+  });
+  if (!response.ok) {
+      console.log(response.error);
+      return;
+  }
+  else{
+      console.log(response);
+  }
 }
