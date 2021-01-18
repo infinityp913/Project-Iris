@@ -1,4 +1,9 @@
-// const tesseract = import("node-tesseract-ocr");
+const lang_codes = {
+  'English' : 'en',
+  'Spanish' : 'es',
+  'Chinese' : 'zh',
+  'Hindi' : 'hi'
+}
 
 //Add event listener after the window has been loaded
 window.onload = loaded;
@@ -7,10 +12,11 @@ window.onload = loaded;
 function loaded(){
   live();
   document.getElementById('button-card').addEventListener('click', async ()=>{
-    classify(snapshot());
+    const input = await classify(snapshot())
+    console.log('label: '+input);
+    translate_req(input);
     // classify(document.getElementById('bottle'))
   })
-  translate_req();
 }
 let w = 0;
 let h = 0;
@@ -66,7 +72,7 @@ const constraint =
 async function classify(img){
   // const img = document.getElementById('canvas'); 
 
-  const model = await mobilenet.load();
+  const model = await mobilenet.load(version=2);
   const predictions = await model.classify(img);
 
   const pred = predictions.reduce((acc, val) => {
@@ -76,18 +82,19 @@ async function classify(img){
   console.log('list of predictions: '+JSON.stringify(predictions));
   console.log('pred: '+(JSON.stringify(pred)));
   console.log(`Prediction: ${pred.className}`);
-  document.getElementById('output-card').innerHTML = `Your object: ${pred.className}`;
+  return pred.className
+  // document.getElementById('output-card').innerHTML = `Your object: ${pred.className}`;
 }
 
-async function translate_req(){
+async function translate_req(input){
   const response = await fetch('/translate', {
       method: 'POST',
           headers: {
               'Content-Type': 'text/plain'
           },
           body: JSON.stringify({
-              text: 'I speak Chinese',
-              lang: 'zh'
+              text: input,
+              lang: lang_codes[document.getElementById('dropdown-card').value]
           })
   });
   if (!response.ok) {
@@ -96,6 +103,7 @@ async function translate_req(){
   }
   else{
     const translation = await response.text();
-      console.log(translation);
+    console.log(translation);
+    document.getElementById('output-card').innerHTML = `Your object: ${translation.slice(1,-1)}`;
   }
 }
