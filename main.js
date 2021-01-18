@@ -1,8 +1,9 @@
 const lang_codes = {
   'English' : 'en',
   'Spanish' : 'es',
-  'Chinese' : 'zh',
-  'Hindi' : 'hi'
+  'French' : 'fr',
+  'German' : 'de',
+  'Dutch' : 'nl'
 }
 
 //Add event listener after the window has been loaded
