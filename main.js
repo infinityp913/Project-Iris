@@ -6,9 +6,14 @@ window.onload = loaded;
 //function to call when the window has been loaded
 function loaded(){
   live();
-  // translate_req();
-  classify();
+  document.getElementById('button-card').addEventListener('click', async ()=>{
+    classify(snapshot());
+    // classify(document.getElementById('bottle'))
+  })
+  translate_req();
 }
+let w = 0;
+let h = 0;
 
 function live() {
   const video = document.getElementById('livevid');
@@ -21,8 +26,8 @@ function live() {
         w = video.videoWidth;
         h = video.videoHeight
 
-        canvas.width = w;
-        canvas.height = h;
+        // canvas.width = w;
+        // canvas.height = h;
         };
     })
 
@@ -33,12 +38,17 @@ function live() {
 
 
 function snapshot(){
-  var canvas = document.createElement('canvas');
-  var context = canvas.getContext("2d");
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext("2d");
   const video = document.getElementById('livevid');
+  canvas.width = w;
+  canvas.height = h;
   context.drawImage(video, 0, 0, w, h);
-  var dataURI = canvas.toDataURL('image/jpeg');
-  localStorage.setItem("image", dataURI);
+  // const dataURI = canvas.toDataURL('image/jpeg');
+  // const temp_img = document.createElement('img'); //DEBUG code
+  // temp_img.src = dataURI;
+  // document.getElementsByTagName('body')[0].prepend(temp_img);
+  return canvas;
 }
 
 const constraint = 
@@ -53,8 +63,8 @@ const constraint =
     }
 
 
-async function classify(){
-  const img = document.getElementById('cat'); // THIS WON'T WORK SINCE THE HTML IS COMMENTED OUT
+async function classify(img){
+  // const img = document.getElementById('canvas'); 
 
   const model = await mobilenet.load();
   const predictions = await model.classify(img);
@@ -63,7 +73,10 @@ async function classify(){
     acc = acc.probability > val.probability ? acc : val;
     return acc;
   }, {className: "", probability: -1});
+  console.log('list of predictions: '+JSON.stringify(predictions));
+  console.log('pred: '+(JSON.stringify(pred)));
   console.log(`Prediction: ${pred.className}`);
+  document.getElementById('output-card').innerHTML = `Your object: ${pred.className}`;
 }
 
 async function translate_req(){
@@ -73,8 +86,8 @@ async function translate_req(){
               'Content-Type': 'text/plain'
           },
           body: JSON.stringify({
-              text: 'I speak Dutch',
-              lang: 'nl'
+              text: 'I speak Chinese',
+              lang: 'zh'
           })
   });
   if (!response.ok) {
@@ -82,6 +95,7 @@ async function translate_req(){
       return;
   }
   else{
-      console.log(response);
+    const translation = await response.text();
+      console.log(translation);
   }
 }
