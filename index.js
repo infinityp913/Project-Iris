@@ -4,7 +4,7 @@ const translate = require('google-translate-api');
 const { parseURL, basicURLParse } = require('whatwg-url');
 const path = require('path');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.text());
