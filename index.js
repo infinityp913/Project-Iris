@@ -6,7 +6,7 @@ const path = require('path');
 const translate = new Translate();
 
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.text());
