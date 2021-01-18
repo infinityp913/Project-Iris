@@ -97,11 +97,11 @@ video {
     border-width: 1px;
     color: rgb(243, 243, 243);
     background-color:  rgb(243, 243, 243, 0);
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-    margin-left: 4vh;
+    margin-left: 4vw;
+}
+
+.option{
+    color: black;
     font-size: 2vh;
 }
 
