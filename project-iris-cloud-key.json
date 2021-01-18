@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "project-iris-302015",
+  "private_key_id": "71df3f05ebbedaaf82d1b1cc1128516776748be8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDK/WsR/oIQpnMG\n8wRm2v4dUtyc6hLIhfn2YFt6o1E+nizoMVG8ib8iF5td+9FS1mIJaKMDE8JjqWxx\nRoBK1ERya963Fjjf2YGFT5mq5JT5AUpNAZZhDNKorQN+DKEYeD5s++EGOJc9b2g4\nC60/9usUETc1JRbD2QGXulRIvhycxah8XO72HxO6MqkJVcaKvT2uKqGMu/7/pvS9\n69kScyDw6za39ba7/0ujNT7l7WoJi/F9DlDAAIGU3fEfwwHEajr4S2faDIkuOcn9\nZb5hKoxL5LZQ5SEcViUE5O1mBagQNksaW4myVnjp9gUeCYKVWAjFhXNJjP+h/iaq\nngkBc/YRAgMBAAECggEAAMySmVWJKYueNE7Mm6MNEQx8ddmuDUAJxeCHO6pc7YQt\n5RQcoENijz3MjMgrAMp7RFI3IhH31/CYzrFaW/EN++1UyR+7RZZTnjS8BCI2O+y3\nYCo7b1Jfme5kbyCZmcEPbdpn/mBGqCVCIcZZ/kB4mHGg6AKnXkoCaZiAMHEfJ7bV\nsIYYp6x4t2nzPnPyKD4HLUNq8CgJ2ve+B8xcRIBKpYvLG4qFaGCQQ3mo2foqgn1q\nTigTC+CJ6qfr+ll/hSKi3aKV+8khE+0BuAo0iNPXzw6BSCAc+ugo+INmLArHFT8+\ndDmBhfmG9qoebzJtddf7fviKQouAS0UGRH0q8nwY4QKBgQDzNISkjddValedXVHC\nr11DfZIHWOgx0cZmqfFP45zqcA9rerfYb5peKz5AU1/LsxCaGv1WTXOm05Sr1VXf\nOGL4cNkhtgoe9YA/8BaesJnkv4gs935ZccgV//gQVoDq6aqCuY2jO4Akk9quAbbN\nagOgEmGsYFaN8uyWMfSYGhg8XQKBgQDVq0g8vnr0AcyAW3SGpZwWrQeIw7n9yw01\nO0fdqVIY5aGYTXxuRngjAvSvjZMWvcACeYDmpo8LLpgFhH8f7xkeifmZHu+ymeGU\n66XfKT6oo90xZ+Sw0xkYRgvveb0sQgEqJU8kf7ehip06BaNreUcsOBCx/Utw60ea\n4Gp/I9dlRQKBgD5DMboW/gvF/8wvueDHmG7Q1PPAlSE7/TkHRNoZAXEbYzc24Z4t\nZC27kGJTdfDmVNe/FSBlD7ij7inXofZVrzC/Yzc4LXsjisPTqVbTC3L+fdRVQCmR\n8ZGASHeWTcbWL2rsKhCiCPpUR+XIVo5cF7WBPzQsLbyFdoA1JdNSyuWZAoGATBrR\nBQnXo3fMjl+E1rzAJveEens0kSg00SQHSfWYT1PjRes7ic/B1L6lxq3HmU8GyBrd\nBcqHorT64uQ5n3c7XDxK0fZJ7DSRO8jfcOgw8EJFc+aMd0sJYjL451hWQCBWZ9uY\nH+j50CkeLV96wLoW1rI1iCAvMc4r2AddB2INw30CgYEA5MhGT3SrX4IToDS7o41z\nofm4wEUa+paaprEaAMR4GL1Lk2CqcI/rY5cIDQlXdauEv7qJd5K2keoGTsgRWpx4\nWvtDRkQrmQsyiV0ooWqwdTRg9XkMoeErCm310bYJmzFzo6PufXzeQAF7Codz6cnB\njneCVhjYp8KDEQq/vvLQo+k=\n-----END PRIVATE KEY-----\n",
+  "client_email": "project-iris-translate@project-iris-302015.iam.gserviceaccount.com",
+  "client_id": "110819195539929134376",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/project-iris-translate%40project-iris-302015.iam.gserviceaccount.com"
+}
