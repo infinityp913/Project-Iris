@@ -108,6 +108,7 @@ body{
 
 #output-card {
     width: fit-content;
+    width: -moz-max-content;
     height: 10vh;
     padding: 10px;
     min-width: 100px;
