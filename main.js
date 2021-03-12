@@ -25,19 +25,14 @@ let h = 0;
 function live() {
   const video = document.getElementById('livevid');
   window.navigator.mediaDevices.getUserMedia(constraint)
-  .then(stream => {
-    video.srcObject = stream;
-    video.onloadedmetadata = (e) => {
-        video.play();
-
-        w = video.videoWidth;
-        h = video.videoHeight
-
-        // canvas.width = w;
-        // canvas.height = h;
-        };
-    })
-
+    .then(stream => {
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+          video.play();
+          w = video.videoWidth;
+          h = video.videoHeight;
+          };
+      })
     .catch( () => {
         alert('Camera permission required');
     });
@@ -51,10 +46,6 @@ function snapshot(){
   canvas.width = w;
   canvas.height = h;
   context.drawImage(video, 0, 0, w, h);
-  // const dataURI = canvas.toDataURL('image/jpeg');
-  // const temp_img = document.createElement('img'); //DEBUG code
-  // temp_img.src = dataURI;
-  // document.getElementsByTagName('body')[0].prepend(temp_img);
   return canvas;
 }
 
@@ -62,7 +53,6 @@ const constraint =
     {
         audio: false,
         video: {
-            frameRate: { ideal: 10, max: 15 },
             width: { ideal: 1280 },
             height: { ideal: 720 },
             facingMode: { ideal: "environment" }
